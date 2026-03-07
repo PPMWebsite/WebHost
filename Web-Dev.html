@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAIAEBAAAAAAIAClAgAAJgAAACAgAAAAACAAEAEAAMsCAACJUE5HDQoaCgAAAA1JSERSAAAAEAAAABAIBgAAAB/z/2EAAAJsSURBVHicdZPPa1NZFMc/59yXJnnpWFN/QAPSYcQqUbAWQSkVYcyAunOcEXXjRgT/AreudKtbNy7cCP4AXSjSgAiiCxUdEFGEUcSqHRDrS03eS++7x8WklBT9wtlcvp9zv9x7jsDuqFZfuCXqGhbyADgAEMAg5OAKYIGeclGnFvLmhxeF/TJSn5xWdQ3LfUBEF12YAYYUYixrQTTQOwPMgrhIQ8ibquoaFrz1waKYT1mx7zSrj1+nMLIF67Zh0SKiFrypuoZa8DmI9MFpi+JvU0RDNSx4KpMnlm5fMooFnyuIY7lEKW87RPvpFRZmX6HxSorrd2FpaynF/0any0FLE4pjv4M60n/vI1GR9pPLlCeO9AVdVH8DDBOItx7g24MLWPsLGlfpPL+BZS2KY3uwzhyo+0EDUazbpjT2B646SmHNBio7jkHIKY//DZYTj/+FFAch+N43g9TqkwYCwSNxleqf55i7eQpBQJSQtdC4Sv51hsGpkxACyfRZdHA1hLyXQJWQJVQmDtN9+xA/+xKffMTPvcPSBP/5Ddbt8O3RJQbWTeCGR8FngKAg4DNcdZSBX3fSfnYVraxCohJSiCEqIoUyUh4izM3Qff+MyvajhKwF6lDUEdKEePwg6YvbdN89JqRfCfOzhPn/lir5hPmM1r3zRGs34Vaug4UOMrJxu3dDNTd89CLZ67tYmoBGwPLB6T10Nk+pvpfszQOSO2fySESdxqus8881QSPkZzCABWSgQvqqSZj/bNEva52M1Kem1RYaedoKmOlP4f4oQQslNVdqCuyOapvzW+Ki3jr/YLT7Y+SiTjFrzgyz/ztZFw+4/WijJgAAAABJRU5ErkJggolQTkcNChoKAAAADUlIRFIAAAAgAAAAIAgGAAAAc3p69AAAANdJREFUeJzVl8ERAiEMRQNjCZ4swRJswiqsyipsYkvYEvZkD3r6TmSELAET+KcwA/vzHzvsEojpdL68yEDbugTU0do89YrW5mkTwcOc69Cy+Hh7fOrn/ap6RpSnyOa/xn9voJdUDSBtil1DYT4CufQY11KYi0AuPaShMA8BKT1US8GdwK5vgfaUI5KJiQ3sRa9d674FxQZa0vN1pS0cl0BrekiiMCaBXumhEoXxCPROD+UoZH9KW06/Gn0RsDLlPu73Av+XkF8UrbWtS4goPMyJ2BZYNsG93r+LXzaPusaxAAAAAElFTkSuQmCC" />
+  <link rel="shortcut icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAIAEBAAAAAAIAClAgAAJgAAACAgAAAAACAAEAEAAMsCAACJUE5HDQoaCgAAAA1JSERSAAAAEAAAABAIBgAAAB/z/2EAAAJsSURBVHicdZPPa1NZFMc/59yXJnnpWFN/QAPSYcQqUbAWQSkVYcyAunOcEXXjRgT/AreudKtbNy7cCP4AXSjSgAiiCxUdEFGEUcSqHRDrS03eS++7x8WklBT9wtlcvp9zv9x7jsDuqFZfuCXqGhbyADgAEMAg5OAKYIGeclGnFvLmhxeF/TJSn5xWdQ3LfUBEF12YAYYUYixrQTTQOwPMgrhIQ8ibquoaFrz1waKYT1mx7zSrj1+nMLIF67Zh0SKiFrypuoZa8DmI9MFpi+JvU0RDNSx4KpMnlm5fMooFnyuIY7lEKW87RPvpFRZmX6HxSorrd2FpaynF/0any0FLE4pjv4M60n/vI1GR9pPLlCeO9AVdVH8DDBOItx7g24MLWPsLGlfpPL+BZS2KY3uwzhyo+0EDUazbpjT2B646SmHNBio7jkHIKY//DZYTj/+FFAch+N43g9TqkwYCwSNxleqf55i7eQpBQJSQtdC4Sv51hsGpkxACyfRZdHA1hLyXQJWQJVQmDtN9+xA/+xKffMTPvcPSBP/5Ddbt8O3RJQbWTeCGR8FngKAg4DNcdZSBX3fSfnYVraxCohJSiCEqIoUyUh4izM3Qff+MyvajhKwF6lDUEdKEePwg6YvbdN89JqRfCfOzhPn/lir5hPmM1r3zRGs34Vaug4UOMrJxu3dDNTd89CLZ67tYmoBGwPLB6T10Nk+pvpfszQOSO2fySESdxqus8881QSPkZzCABWSgQvqqSZj/bNEva52M1Kem1RYaedoKmOlP4f4oQQslNVdqCuyOapvzW+Ki3jr/YLT7Y+SiTjFrzgyz/ztZFw+4/WijJgAAAABJRU5ErkJggolQTkcNChoKAAAADUlIRFIAAAAgAAAAIAgGAAAAc3p69AAAANdJREFUeJzVl8ERAiEMRQNjCZ4swRJswiqsyipsYkvYEvZkD3r6TmSELAET+KcwA/vzHzvsEojpdL68yEDbugTU0do89YrW5mkTwcOc69Cy+Hh7fOrn/ap6RpSnyOa/xn9voJdUDSBtil1DYT4CufQY11KYi0AuPaShMA8BKT1US8GdwK5vgfaUI5KJiQ3sRa9d674FxQZa0vN1pS0cl0BrekiiMCaBXumhEoXxCPROD+UoZH9KW06/Gn0RsDLlPu73Av+XkF8UrbWtS4goPMyJ2BZYNsG93r+LXzaPusaxAAAAAElFTkSuQmCC" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Website Development | Fast, Lean HTML Websites — Prism Performance Marketing</title>
+  <meta name="description" content="Professional HTML websites built for speed, SEO, and conversions. No monthly platform fees. No WordPress bloat. Pure HTML/CSS/JS hosted on Cloudflare — built for businesses across Australia, Singapore & Malaysia." />
+  <meta property="og:title" content="Website Development | Prism Performance Marketing" />
+  <meta property="og:description" content="High-performance HTML websites with sub-1-second load times. No Wix. No Squarespace fees. SEO-optimised, mobile-ready, conversion-focused." />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://www.prismperformancemarketing.com/web-dev/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Lato:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+  <!-- End Google Tag Manager -->
+
+  <style>
+    *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+    html { scroll-behavior:smooth; }
+    body { font-family:'Source Sans Pro',sans-serif; color:#2c3e50; background:#fff; line-height:1.65; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
+    a { text-decoration:none; color:inherit; }
+    ul { list-style:none; }
+
+    :root {
+      --navy:#1A2A3A; --blue:#2E8FEB; --blue-dark:#1a6ec4;
+      --silver:#C4C9CC; --bg-alt:#F7F9FC;
+      --text:#2c3e50; --text-light:#5e7283; --white:#fff;
+      --green:#25D366; --radius:14px; --radius-lg:20px;
+      --shadow:0 4px 24px rgba(26,42,58,.07);
+      --shadow-md:0 8px 36px rgba(26,42,58,.11);
+      --shadow-lg:0 16px 56px rgba(26,42,58,.15);
+      --tr:.24s ease;
+      --accent:var(--blue);
+      --accent-dark:var(--blue-dark);
+      --accent-light:rgba(46,143,235,.1);
+    }
+
+    .container { width:100%; max-width:1180px; margin:0 auto; padding:0 28px; }
+    .section { padding:96px 0; }
+    .section--alt { background:var(--bg-alt); }
+
+    h1,h2,h3,h4 { font-family:'Montserrat',sans-serif; color:var(--navy); line-height:1.18; }
+    h1 { font-size:clamp(2.4rem,5vw,3.7rem); font-weight:900; }
+    h2 { font-size:clamp(1.8rem,3.5vw,2.6rem); font-weight:800; }
+    h3 { font-size:1.2rem; font-weight:700; }
+
+    .eyebrow {
+      display:inline-block; font-family:'Lato',sans-serif;
+      font-size:11.5px; font-weight:700; letter-spacing:.14em; text-transform:uppercase;
+      color:var(--blue); background:rgba(46,143,235,.1);
+      padding:5px 14px; border-radius:50px; margin-bottom:16px;
+    }
+    .subtitle { font-family:'Lato',sans-serif; font-size:clamp(1rem,2vw,1.18rem); color:var(--text-light); line-height:1.72; max-width:600px; }
+
+    .btn {
+      display:inline-flex; align-items:center; gap:9px;
+      font-family:'Lato',sans-serif; font-weight:700; font-size:15px;
+      padding:14px 28px; border-radius:50px; border:none; cursor:pointer;
+      transition:transform var(--tr),box-shadow var(--tr),background var(--tr);
+      white-space:nowrap;
+    }
+    .btn:hover { transform:translateY(-2px); }
+    .btn-wa  { background:var(--green); color:#fff; box-shadow:0 6px 22px rgba(37,211,102,.32); }
+    .btn-wa:hover { background:#1cb957; box-shadow:0 10px 30px rgba(37,211,102,.42); }
+    .btn-blue { background:var(--blue); color:#fff; box-shadow:0 6px 22px rgba(46,143,235,.28); }
+    .btn-blue:hover { background:var(--blue-dark); box-shadow:0 10px 30px rgba(46,143,235,.38); }
+    .btn-outline { background:transparent; color:var(--navy); border:2px solid rgba(196,201,204,.6); }
+    .btn-outline:hover { border-color:var(--blue); color:var(--blue); }
+    .btn-ghost { background:rgba(255,255,255,.1); color:#fff; border:1.5px solid rgba(255,255,255,.22); backdrop-filter:blur(8px); }
+    .btn-ghost:hover { background:rgba(255,255,255,.2); }
+
+    /* ── NAV ── */
+    .nav { position:fixed; top:0; left:0; right:0; z-index:1000; background:rgba(255,255,255,.92); backdrop-filter:blur(18px); border-bottom:1px solid rgba(196,201,204,.25); transition:box-shadow var(--tr); }
+    .nav.scrolled { box-shadow:0 2px 24px rgba(26,42,58,.09); }
+    .nav-inner { display:flex; align-items:center; justify-content:space-between; height:68px; gap:16px; }
+    .nav-logo { display:flex; align-items:center; gap:10px; flex-shrink:0; }
+    .nav-logo-img { width:44px; height:44px; object-fit:contain; flex-shrink:0; }
+    .nav-logo-wordmark { font-family:'Montserrat',sans-serif; font-weight:900; font-size:15px; color:var(--navy); line-height:1.1; }
+    .nav-logo-wordmark em { font-style:normal; color:var(--blue); }
+    .nav-logo-sub { font-family:'Lato',sans-serif; font-size:9.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--text-light); display:block; margin-top:1px; }
+    .nav-links { display:flex; align-items:center; gap:4px; flex:1; justify-content:center; }
+    .nav-item { position:relative; }
+    .nav-item > a, .nav-item > button { font-family:'Lato',sans-serif; font-weight:600; font-size:13.5px; color:var(--text-light); padding:8px 12px; border-radius:8px; background:none; border:none; cursor:pointer; display:flex; align-items:center; gap:4px; transition:color var(--tr),background var(--tr); }
+    .nav-item > a:hover, .nav-item > button:hover { color:var(--navy); background:rgba(26,42,58,.05); }
+    .nav-item > a.active { color:var(--blue); font-weight:700; }
+    .nav-chevron { font-size:10px; opacity:.5; }
+    .nav-dropdown { position:absolute; top:calc(100% + 8px); left:50%; transform:translateX(-50%) translateY(8px); background:var(--white); border-radius:var(--radius); box-shadow:var(--shadow-lg); border:1px solid rgba(196,201,204,.3); padding:8px; min-width:230px; opacity:0; visibility:hidden; pointer-events:none; transition:opacity var(--tr),transform var(--tr),visibility var(--tr); }
+    .nav-dropdown.open { opacity:1; visibility:visible; pointer-events:all; transform:translateX(-50%) translateY(0); }
+    .nav-dropdown a { display:flex; align-items:center; gap:10px; padding:10px 14px; border-radius:8px; font-family:'Lato',sans-serif; font-size:13.5px; font-weight:600; color:var(--text); transition:background var(--tr),color var(--tr); }
+    .nav-dropdown a:hover { background:var(--bg-alt); color:var(--blue); }
+    .nav-dropdown a.active { color:var(--blue); }
+    .nd-icon { font-size:16px; }
+    .nd-sub { font-size:11px; color:var(--text-light); font-weight:400; }
+    .nd-divider { height:1px; background:rgba(196,201,204,.3); margin:6px 0; }
+    .nav-cta { display:flex; align-items:center; gap:10px; flex-shrink:0; }
+    .nav-toggle { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:6px; border:none; background:none; }
+    .nav-toggle span { display:block; width:22px; height:2px; background:var(--navy); border-radius:2px; transition:transform .2s,opacity .2s; }
+    .mobile-nav { display:none; position:fixed; inset:0; z-index:998; background:var(--white); padding:84px 28px 40px; flex-direction:column; overflow-y:auto; }
+    .mobile-nav.open { display:flex; }
+    .mn-section { margin-bottom:28px; }
+    .mn-label { font-family:'Lato',sans-serif; font-size:10.5px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--silver); margin-bottom:10px; }
+    .mobile-nav a { display:block; font-family:'Lato',sans-serif; font-weight:700; font-size:18px; color:var(--navy); padding:12px 4px; border-bottom:1px solid rgba(196,201,204,.25); }
+    .mn-accordion-btn { display:flex; align-items:center; justify-content:space-between; width:100%; background:none; border:none; padding:12px 4px; font-family:'Lato',sans-serif; font-weight:700; font-size:18px; color:var(--navy); cursor:pointer; border-bottom:1px solid rgba(196,201,204,.25); text-align:left; }
+    .mn-accordion-btn:hover { color:var(--blue); }
+    .mn-chevron { font-size:14px; transition:transform 0.2s; }
+    .mn-ctas { display:flex; flex-direction:column; gap:12px; margin-top:24px; }
+    .mn-ctas .btn { justify-content:center; width:100%; }
+
+    /* ── HERO ── */
+    .hero {
+      padding:150px 0 100px; position:relative; overflow:hidden;
+      background:linear-gradient(160deg, #0a1628 0%, #1A2A3A 55%, #0d1e35 100%);
+    }
+    .hero-bg { position:absolute; inset:0; pointer-events:none; overflow:hidden; }
+    .hero-bg-orb {
+      position:absolute; border-radius:50%; filter:blur(80px); opacity:.18;
+    }
+    .hero-bg-orb-1 { width:600px; height:600px; background:#2E8FEB; top:-100px; right:-150px; }
+    .hero-bg-orb-2 { width:400px; height:400px; background:#1a6ec4; bottom:-100px; left:-100px; }
+    .hero-inner { display:grid; grid-template-columns:1fr 1fr; gap:72px; align-items:center; position:relative; }
+
+    .breadcrumb { display:flex; align-items:center; gap:8px; margin-bottom:24px; }
+    .breadcrumb a, .breadcrumb span { font-family:'Lato',sans-serif; font-size:13px; color:rgba(255,255,255,.45); }
+    .breadcrumb a:hover { color:rgba(255,255,255,.8); }
+    .breadcrumb-sep { color:rgba(255,255,255,.25); }
+
+    .hero h1 { color:#fff; margin-bottom:22px; }
+    .hero h1 .accent { color:#60b3ff; }
+    .hero-sub { font-family:'Lato',sans-serif; font-size:clamp(1rem,2vw,1.18rem); color:rgba(255,255,255,.65); line-height:1.72; max-width:540px; margin-bottom:36px; }
+    .hero-actions { display:flex; gap:12px; flex-wrap:wrap; margin-bottom:48px; }
+
+    .hero-trust { display:flex; flex-wrap:wrap; gap:12px; }
+    .trust-pill {
+      display:inline-flex; align-items:center; gap:7px;
+      background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.12);
+      border-radius:50px; padding:8px 14px;
+      font-family:'Lato',sans-serif; font-size:12.5px; color:rgba(255,255,255,.75); font-weight:600;
+    }
+    .trust-pill-icon { font-size:14px; }
+
+    /* Hero Visual */
+    .hero-visual { position:relative; display:flex; align-items:center; justify-content:center; }
+    .hv-browser {
+      background:#1e2d3d; border-radius:16px; overflow:hidden;
+      box-shadow:0 40px 100px rgba(0,0,0,.55), 0 0 0 1px rgba(255,255,255,.1);
+      width:100%; max-width:480px;
+    }
+    .hv-browser-bar {
+      background:#162030; padding:12px 16px; display:flex; align-items:center; gap:10px;
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    .hv-browser-dots { display:flex; gap:6px; }
+    .hv-browser-dot { width:10px; height:10px; border-radius:50%; }
+    .hv-browser-dot:nth-child(1) { background:#ff5f57; }
+    .hv-browser-dot:nth-child(2) { background:#ffbd2e; }
+    .hv-browser-dot:nth-child(3) { background:#28ca41; }
+    .hv-browser-url {
+      flex:1; background:rgba(255,255,255,.07); border-radius:6px;
+      padding:5px 12px; font-family:'Lato',sans-serif; font-size:11px;
+      color:rgba(255,255,255,.45);
+    }
+    .hv-browser-body { padding:0; }
+    .hv-page-header { background:linear-gradient(135deg,#1a2a3a,#0f1e30); padding:24px 20px; }
+    .hv-page-nav { display:flex; gap:8px; margin-bottom:16px; }
+    .hv-nav-pill { height:6px; border-radius:3px; background:rgba(46,143,235,.5); }
+    .hv-nav-pill:first-child { width:28px; }
+    .hv-nav-pill:nth-child(2) { width:22px; }
+    .hv-nav-pill:nth-child(3) { width:18px; }
+    .hv-nav-pill:nth-child(4) { width:22px; }
+    .hv-hero-mockup-h { height:8px; background:rgba(255,255,255,.7); border-radius:4px; width:70%; margin-bottom:10px; }
+    .hv-hero-mockup-sub { height:5px; background:rgba(255,255,255,.2); border-radius:3px; width:50%; margin-bottom:16px; }
+    .hv-hero-mockup-btn { height:28px; width:100px; background:#2E8FEB; border-radius:14px; }
+    .hv-page-body { padding:16px 20px; }
+    .hv-card-row { display:grid; grid-template-columns:1fr 1fr 1fr; gap:8px; margin-bottom:12px; }
+    .hv-mini-card { background:rgba(46,143,235,.08); border:1px solid rgba(46,143,235,.2); border-radius:8px; padding:10px; }
+    .hv-mini-card-icon { font-size:16px; margin-bottom:4px; }
+    .hv-mini-card-bar { height:4px; background:rgba(46,143,235,.3); border-radius:2px; margin-bottom:3px; }
+    .hv-mini-card-bar:last-child { width:70%; }
+    .hv-speed-badge {
+      position:absolute; bottom:-16px; right:-16px;
+      background:#fff; border-radius:14px; padding:14px 18px;
+      box-shadow:0 16px 48px rgba(0,0,0,.3);
+      display:flex; align-items:center; gap:10px;
+      animation:floatB 4s ease-in-out infinite;
+    }
+    @keyframes floatA{ 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+    @keyframes floatB{ 0%,100%{transform:translateY(0)} 50%{transform:translateY(7px)} }
+    .hv-speed-val { font-family:'Montserrat',sans-serif; font-size:22px; font-weight:900; color:var(--blue); }
+    .hv-speed-label { font-family:'Lato',sans-serif; font-size:11px; font-weight:700; color:#5e7283; line-height:1.3; }
+    .hv-cost-badge {
+      position:absolute; top:-16px; left:-16px;
+      background:#fff; border-radius:14px; padding:14px 18px;
+      box-shadow:0 16px 48px rgba(0,0,0,.3);
+      display:flex; align-items:center; gap:10px;
+      animation:floatA 4.5s ease-in-out infinite;
+    }
+    .hv-cost-val { font-family:'Montserrat',sans-serif; font-size:20px; font-weight:900; color:#25a244; }
+    .hv-cost-label { font-family:'Lato',sans-serif; font-size:11px; font-weight:700; color:#5e7283; line-height:1.3; }
+
+    /* ── COMPARISON ── */
+    .compare-grid { display:grid; grid-template-columns:1fr 1fr; gap:32px; margin-top:56px; }
+    .compare-card {
+      border-radius:var(--radius-lg); padding:36px; border:2px solid transparent;
+    }
+    .compare-card--them {
+      background:#fff; border-color:rgba(196,201,204,.35);
+      box-shadow:var(--shadow);
+    }
+    .compare-card--us {
+      background:linear-gradient(135deg,#f0f7ff,#e8f3fd);
+      border-color:rgba(46,143,235,.3);
+      box-shadow:0 8px 36px rgba(46,143,235,.12);
+    }
+    .compare-card-header { display:flex; align-items:center; gap:12px; margin-bottom:28px; }
+    .compare-card-icon { font-size:28px; }
+    .compare-card-title { font-family:'Montserrat',sans-serif; font-weight:800; font-size:1.2rem; color:var(--navy); }
+    .compare-card-badge {
+      margin-left:auto; font-family:'Lato',sans-serif; font-size:11px; font-weight:700;
+      padding:4px 12px; border-radius:50px;
+    }
+    .badge-bad { background:rgba(239,68,68,.1); color:#dc2626; }
+    .badge-good { background:rgba(46,143,235,.12); color:var(--blue); }
+    .compare-rows { display:flex; flex-direction:column; gap:16px; }
+    .compare-row { display:flex; align-items:flex-start; gap:12px; }
+    .compare-row-icon { font-size:16px; flex-shrink:0; margin-top:2px; }
+    .compare-row-text { font-family:'Lato',sans-serif; font-size:14.5px; color:var(--text); line-height:1.5; }
+    .compare-row-text strong { color:var(--navy); font-weight:700; }
+
+    /* ── WHAT'S INCLUDED ── */
+    .included-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:56px; }
+    .included-card {
+      background:#fff; border-radius:var(--radius); padding:28px;
+      border:1px solid rgba(196,201,204,.3); box-shadow:var(--shadow);
+      transition:transform var(--tr),box-shadow var(--tr),border-color var(--tr);
+    }
+    .included-card:hover { transform:translateY(-4px); box-shadow:var(--shadow-md); border-color:rgba(46,143,235,.25); }
+    .included-card-icon { font-size:30px; margin-bottom:14px; }
+    .included-card h3 { font-size:1.05rem; color:var(--navy); margin-bottom:8px; }
+    .included-card p { font-family:'Lato',sans-serif; font-size:14px; color:var(--text-light); line-height:1.6; }
+
+    /* ── NOT FOR ── */
+    .not-for-wrap { max-width:800px; margin:0 auto; text-align:center; }
+    .not-for-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:40px; }
+    .not-for-card {
+      background:#fff; border-radius:var(--radius); padding:24px 20px;
+      border:1px solid rgba(196,201,204,.3); box-shadow:var(--shadow);
+    }
+    .not-for-card-icon { font-size:28px; margin-bottom:10px; }
+    .not-for-card h3 { font-size:1rem; color:var(--navy); margin-bottom:6px; }
+    .not-for-card p { font-family:'Lato',sans-serif; font-size:13px; color:var(--text-light); line-height:1.55; }
+    .not-for-note {
+      margin-top:32px; font-family:'Lato',sans-serif; font-size:14.5px;
+      color:var(--text-light); line-height:1.65;
+    }
+    .not-for-note strong { color:var(--navy); }
+
+    /* ── PROCESS ── */
+    .process-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:0; margin-top:56px; position:relative; }
+    .process-grid::before {
+      content:''; position:absolute; top:44px; left:calc(12.5% + 20px); right:calc(12.5% + 20px);
+      height:2px; background:linear-gradient(90deg, rgba(46,143,235,.2), rgba(46,143,235,.6), rgba(46,143,235,.2));
+    }
+    .process-step { text-align:center; padding:0 16px; position:relative; }
+    .process-num {
+      width:88px; height:88px; border-radius:50%;
+      background:linear-gradient(135deg, var(--blue), var(--blue-dark));
+      display:flex; align-items:center; justify-content:center;
+      margin:0 auto 20px;
+      box-shadow:0 8px 28px rgba(46,143,235,.3);
+      font-family:'Montserrat',sans-serif; font-weight:900; font-size:1.6rem; color:#fff;
+      position:relative; z-index:1;
+    }
+    .process-step h3 { font-size:1.05rem; color:var(--navy); margin-bottom:8px; }
+    .process-step p { font-family:'Lato',sans-serif; font-size:13.5px; color:var(--text-light); line-height:1.6; }
+
+    /* ── PRICING ── */
+    .pricing-wrap { max-width:740px; margin:56px auto 0; }
+    .pricing-card {
+      background:#fff; border-radius:var(--radius-lg); padding:48px;
+      border:2px solid rgba(46,143,235,.2);
+      box-shadow:0 16px 48px rgba(46,143,235,.1);
+      text-align:center;
+    }
+    .pricing-card-eyebrow {
+      display:inline-block; font-family:'Lato',sans-serif; font-size:11px; font-weight:700;
+      letter-spacing:.14em; text-transform:uppercase; color:var(--blue);
+      background:rgba(46,143,235,.1); padding:5px 14px; border-radius:50px; margin-bottom:20px;
+    }
+    .pricing-from {
+      font-family:'Montserrat',sans-serif; font-size:3rem; font-weight:900; color:var(--navy); line-height:1;
+      margin-bottom:6px;
+    }
+    .pricing-from span { font-size:1.5rem; color:var(--text-light); font-weight:600; }
+    .pricing-note { font-family:'Lato',sans-serif; font-size:14px; color:var(--text-light); margin-bottom:28px; }
+    .pricing-features { display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin-bottom:32px; }
+    .pricing-feat {
+      display:inline-flex; align-items:center; gap:6px;
+      font-family:'Lato',sans-serif; font-size:13px; font-weight:600; color:var(--text);
+      background:var(--bg-alt); padding:6px 14px; border-radius:50px;
+    }
+    .pricing-feat-check { color:var(--blue); font-size:13px; }
+    .pricing-actions { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+    .pricing-disclaimer { font-family:'Lato',sans-serif; font-size:12.5px; color:var(--text-light); margin-top:20px; }
+
+    /* ── FAQ ── */
+    .faq-grid { max-width:800px; margin:56px auto 0; display:flex; flex-direction:column; gap:16px; }
+    .faq-item {
+      background:#fff; border-radius:var(--radius); border:1px solid rgba(196,201,204,.3);
+      box-shadow:var(--shadow); overflow:hidden;
+    }
+    .faq-q {
+      width:100%; background:none; border:none; padding:22px 24px;
+      display:flex; align-items:center; justify-content:space-between;
+      font-family:'Lato',sans-serif; font-weight:700; font-size:16px; color:var(--navy);
+      cursor:pointer; text-align:left; transition:color var(--tr);
+    }
+    .faq-q:hover { color:var(--blue); }
+    .faq-q-icon { font-size:18px; color:var(--blue); flex-shrink:0; margin-left:12px; transition:transform .2s; }
+    .faq-a {
+      padding:0 24px 22px;
+      font-family:'Lato',sans-serif; font-size:14.5px; color:var(--text-light); line-height:1.72;
+      display:none;
+    }
+    .faq-a.open { display:block; }
+
+    /* ── FINAL CTA ── */
+    .cta-band {
+      background:linear-gradient(135deg,#0a1628 0%,#1A2A3A 60%,#0f2240 100%);
+      padding:96px 0; text-align:center; position:relative; overflow:hidden;
+    }
+    .cta-band-bg { position:absolute; inset:0; pointer-events:none; }
+    .cta-band-orb {
+      position:absolute; border-radius:50%; filter:blur(80px); opacity:.15;
+    }
+    .cta-band-orb-1 { width:500px; height:500px; background:#2E8FEB; top:-200px; right:-100px; }
+    .cta-band-orb-2 { width:300px; height:300px; background:#1a6ec4; bottom:-100px; left:-50px; }
+    .cta-band-inner { position:relative; }
+    .cta-band h2 { color:#fff; margin-bottom:16px; }
+    .cta-band p { font-family:'Lato',sans-serif; font-size:1.1rem; color:rgba(255,255,255,.65); margin-bottom:36px; max-width:560px; margin-left:auto; margin-right:auto; }
+    .cta-band-actions { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+
+    /* ── FOOTER ── */
+    .footer { background:var(--navy); color:rgba(255,255,255,.55); padding:64px 0 36px; }
+    .footer-grid { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:40px; margin-bottom:48px; }
+    .footer-brand-logo { display:flex; align-items:center; gap:10px; margin-bottom:14px; }
+    .footer-brand-logo-img { width:40px; height:40px; object-fit:contain; }
+    .footer-brand-name { font-family:'Montserrat',sans-serif; font-weight:900; font-size:14px; color:#fff; }
+    .footer-brand-name em { font-style:normal; color:var(--blue); }
+    .footer-brand-sub { font-family:'Lato',sans-serif; font-size:9px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:rgba(255,255,255,.35); display:block; margin-top:2px; }
+    .footer-brand-desc { font-family:'Lato',sans-serif; font-size:13.5px; line-height:1.7; color:rgba(255,255,255,.45); margin-bottom:20px; }
+    .footer-col h4 { font-family:'Montserrat',sans-serif; font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:rgba(255,255,255,.35); margin-bottom:14px; }
+    .footer-col a { display:block; font-family:'Lato',sans-serif; font-size:13.5px; color:rgba(255,255,255,.55); padding:4px 0; transition:color var(--tr); }
+    .footer-col a:hover { color:#fff; }
+    .footer-bottom { border-top:1px solid rgba(255,255,255,.07); padding-top:28px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px; }
+    .footer-bottom p { font-family:'Lato',sans-serif; font-size:12.5px; }
+    .footer-bottom-links { display:flex; gap:16px; }
+    .footer-bottom-links a { font-family:'Lato',sans-serif; font-size:12.5px; color:rgba(255,255,255,.4); transition:color var(--tr); }
+    .footer-bottom-links a:hover { color:#fff; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width:1024px) {
+      .hero-inner { grid-template-columns:1fr; gap:48px; }
+      .hero-visual { display:none; }
+      .compare-grid { grid-template-columns:1fr; }
+      .included-grid { grid-template-columns:1fr 1fr; }
+      .process-grid { grid-template-columns:1fr 1fr; gap:32px; }
+      .process-grid::before { display:none; }
+      .footer-grid { grid-template-columns:1fr 1fr; }
+    }
+    @media (max-width:768px) {
+      .section { padding:72px 0; }
+      .nav-links, .nav-cta { display:none; }
+      .nav-toggle { display:flex; }
+      .included-grid { grid-template-columns:1fr; }
+      .not-for-grid { grid-template-columns:1fr; }
+      .process-grid { grid-template-columns:1fr 1fr; }
+      .footer-grid { grid-template-columns:1fr 1fr; }
+    }
+    @media (max-width:560px) {
+      .compare-grid { grid-template-columns:1fr; }
+      .process-grid { grid-template-columns:1fr; }
+      .footer-grid { grid-template-columns:1fr; }
+      .pricing-card { padding:32px 24px; }
+      .pricing-from { font-size:2.4rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '000000000000000');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=000000000000000&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel -->
+
+<!-- NAV -->
+<nav class="nav" id="mainNav">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAA10lEQVR4nNWXwRECIQxFAzGJ3izBEmzCKqzCKqzCJraEPdmDnr4TGSELwAQ+KcwA/vzHzrsEojpdL68yEDbugTU0do89YrW5mkTwcOc69Cy+Hh7fOrn/ap6RpSnyOa/xn9voJdUDSBtil1DYT4CufQY11KYi0AuPaShMA8BKT1US8GdwK5vgfaUI5KJiQ3sRa9d674FxQZa0vN1pS0cl0BrekiiMCaBXumhEoXxCPROD+UoZH9KW06/Gn0RsDLlPu73Av+XkF8UrbWtS4goPMyJ2BZYNsG93r+LXzaPusaxAAAAAElFTkSuQmCC" alt="PPM Logo" class="nav-logo-img">
+        <div class="nav-logo-wordmark">Prism <em>Performance</em><span class="nav-logo-sub">Marketing</span></div>
+      </a>
+      <ul class="nav-links" role="list">
+        <li class="nav-item">
+          <button onclick="toggleDropdown('services-dd', this)">Services <span class="nav-chevron">▾</span></button>
+          <div class="nav-dropdown" id="services-dd" role="menu">
+            <a href="Meta-Ads.html" role="menuitem"><span class="nd-icon">📘</span><div><div>Meta Ads</div><div class="nd-sub">Facebook &amp; Instagram advertising</div></div></a>
+            <a href="Google-Ads.html" role="menuitem"><span class="nd-icon">🔴</span><div><div>Google Ads</div><div class="nd-sub">Search, Shopping &amp; Display</div></div></a>
+            <a href="Web-Dev.html" role="menuitem" class="active"><span class="nd-icon">🌐</span><div><div>Website Development</div><div class="nd-sub">Fast, lean HTML websites</div></div></a>
+            <div class="nd-divider"></div>
+            <a href="Services.html" role="menuitem"><span class="nd-icon">🗂️</span><div><div>All Services</div><div class="nd-sub">Full overview</div></div></a>
+          </div>
+        </li>
+        <li class="nav-item"><a href="SEO.html">SEO</a></li>
+        <li class="nav-item">
+          <button onclick="toggleDropdown('training-dd', this)">Training <span class="nav-chevron">▾</span></button>
+          <div class="nav-dropdown" id="training-dd" role="menu">
+            <a href="Training-Meta-Ads.html" role="menuitem"><span class="nd-icon">📘</span><div><div>Facebook &amp; Instagram Ads</div><div class="nd-sub">Run your own Meta campaigns</div></div></a>
+            <a href="Training-Google-Ads.html" role="menuitem"><span class="nd-icon">🔴</span><div><div>Google Ads Training</div><div class="nd-sub">Search, Shopping &amp; Display</div></div></a>
+            <a href="Training-AI-Prompting.html" role="menuitem"><span class="nd-icon">🤖</span><div><div>AI Prompting Mastery</div><div class="nd-sub">For entrepreneurs &amp; teams</div></div></a>
+            <div class="nd-divider"></div>
+            <a href="Training.html" role="menuitem"><span class="nd-icon">🎓</span><div><div>All Training</div></div></a>
+          </div>
+        </li>
+        <li class="nav-item"><a href="Case-Studies.html">Case Studies</a></li>
+        <li class="nav-item"><a href="About.html">About Jax</a></li>
+        <li class="nav-item"><a href="FAQ.html">FAQ</a></li>
+        <li class="nav-item"><a href="Contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="https://wa.me/6588394982" class="btn btn-wa" target="_blank" rel="noopener">💬 WhatsApp Jax</a>
+      </div>
+      <button class="nav-toggle" aria-label="Open menu" onclick="toggleNav()" id="navToggle">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav" role="dialog" aria-modal="true">
+  <div class="mn-section">
+    <button class="mn-accordion-btn" onclick="toggleMnSection('mn-services')">
+      <span>Services</span><span class="mn-chevron" id="mn-services-chevron">▾</span>
+    </button>
+    <div class="mn-accordion-body" id="mn-services" style="display:none;">
+      <a href="Services.html" onclick="toggleNav()">🗂️ All Services</a>
+      <a href="Meta-Ads.html" onclick="toggleNav()">📘 Meta Ads Management</a>
+      <a href="Google-Ads.html" onclick="toggleNav()">🔴 Google Ads Management</a>
+      <a href="SEO.html" onclick="toggleNav()">🔍 SEO Services</a>
+      <a href="Web-Dev.html" onclick="toggleNav()">🌐 Website Development</a>
+    </div>
+  </div>
+  <div class="mn-section">
+    <button class="mn-accordion-btn" onclick="toggleMnSection('mn-training')">
+      <span>Training</span><span class="mn-chevron" id="mn-training-chevron">▾</span>
+    </button>
+    <div class="mn-accordion-body" id="mn-training" style="display:none;">
+      <a href="Training.html" onclick="toggleNav()">🎓 All Training</a>
+      <a href="Training-Meta-Ads.html" onclick="toggleNav()">📘 Facebook &amp; Instagram Ads</a>
+      <a href="Training-Google-Ads.html" onclick="toggleNav()">🔴 Google Ads Training</a>
+      <a href="Training-AI-Prompting.html" onclick="toggleNav()">🤖 AI Prompting Mastery</a>
+    </div>
+  </div>
+  <div class="mn-section">
+    <div class="mn-label">Company</div>
+    <a href="Case-Studies.html" onclick="toggleNav()">Case Studies</a>
+    <a href="About.html" onclick="toggleNav()">About Jax</a>
+    <a href="FAQ.html" onclick="toggleNav()">FAQ</a>
+    <a href="Contact.html" onclick="toggleNav()">Contact</a>
+  </div>
+  <div class="mn-ctas">
+    <a href="https://wa.me/6588394982" class="btn btn-wa" target="_blank" rel="noopener">💬 WhatsApp Jax</a>
+    <a href="https://calendar.app.google/pKXduKHa99n2qbEy8" class="btn btn-ghost" style="background:rgba(26,42,58,.08);color:var(--navy);border-color:rgba(196,201,204,.5);" target="_blank" rel="noopener">📅 Book a Free Strategy Call</a>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     HERO
+══════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-bg">
+    <div class="hero-bg-orb hero-bg-orb-1"></div>
+    <div class="hero-bg-orb hero-bg-orb-2"></div>
+  </div>
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb-sep">›</span>
+          <a href="Services.html">Services</a>
+          <span class="breadcrumb-sep">›</span>
+          <span>Website Development</span>
+        </div>
+        <span class="eyebrow">Website Development</span>
+        <h1>High-Performance Business Websites — <span class="accent">Built to Load Fast</span> and Convert</h1>
+        <p class="hero-sub">No monthly platform fees. No WordPress bloat. No drag-and-drop limitations. Just clean, fast, professional HTML websites that work hard for your business from day one.</p>
+        <div class="hero-actions">
+          <a href="https://wa.me/6588394982?text=Hi%20Jax%2C%20I'm%20interested%20in%20a%20website%20build" class="btn btn-wa" target="_blank" rel="noopener">💬 WhatsApp Jax</a>
+          <a href="https://calendar.app.google/pKXduKHa99n2qbEy8" class="btn btn-ghost" target="_blank" rel="noopener">📅 Book a Free Strategy Call</a>
+        </div>
+        <div class="hero-trust">
+          <span class="trust-pill"><span class="trust-pill-icon">⚡</span> Sub-1-second load times</span>
+          <span class="trust-pill"><span class="trust-pill-icon">💰</span> Zero monthly platform fees</span>
+          <span class="trust-pill"><span class="trust-pill-icon">☁️</span> Cloudflare hosting included</span>
+          <span class="trust-pill"><span class="trust-pill-icon">📱</span> Mobile-first design</span>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div style="position:relative; width:100%; max-width:480px;">
+          <div class="hv-cost-badge">
+            <div>
+              <div class="hv-cost-val">$0/mo</div>
+              <div class="hv-cost-label">Platform fees<br>after launch</div>
+            </div>
+          </div>
+          <div class="hv-browser">
+            <div class="hv-browser-bar">
+              <div class="hv-browser-dots">
+                <div class="hv-browser-dot"></div>
+                <div class="hv-browser-dot"></div>
+                <div class="hv-browser-dot"></div>
+              </div>
+              <div class="hv-browser-url">yourbusiness.com</div>
+            </div>
+            <div class="hv-browser-body">
+              <div class="hv-page-header">
+                <div class="hv-page-nav">
+                  <div class="hv-nav-pill"></div>
+                  <div class="hv-nav-pill"></div>
+                  <div class="hv-nav-pill"></div>
+                  <div class="hv-nav-pill"></div>
+                </div>
+                <div class="hv-hero-mockup-h"></div>
+                <div class="hv-hero-mockup-sub"></div>
+                <div class="hv-hero-mockup-btn"></div>
+              </div>
+              <div class="hv-page-body">
+                <div class="hv-card-row">
+                  <div class="hv-mini-card">
+                    <div class="hv-mini-card-icon">⚡</div>
+                    <div class="hv-mini-card-bar"></div>
+                    <div class="hv-mini-card-bar"></div>
+                  </div>
+                  <div class="hv-mini-card">
+                    <div class="hv-mini-card-icon">🎯</div>
+                    <div class="hv-mini-card-bar"></div>
+                    <div class="hv-mini-card-bar"></div>
+                  </div>
+                  <div class="hv-mini-card">
+                    <div class="hv-mini-card-icon">📱</div>
+                    <div class="hv-mini-card-bar"></div>
+                    <div class="hv-mini-card-bar"></div>
+                  </div>
+                </div>
+                <div style="height:6px;background:rgba(46,143,235,.1);border-radius:3px;margin-bottom:8px;"></div>
+                <div style="height:6px;background:rgba(46,143,235,.07);border-radius:3px;width:80%;margin-bottom:8px;"></div>
+                <div style="height:6px;background:rgba(46,143,235,.07);border-radius:3px;width:60%;"></div>
+              </div>
+            </div>
+          </div>
+          <div class="hv-speed-badge">
+            <div style="font-size:22px;">⚡</div>
+            <div>
+              <div class="hv-speed-val">&lt;1s</div>
+              <div class="hv-speed-label">Average<br>load time</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     WHY NOT WIX / COMPARISON
+══════════════════════════════════════════ -->
+<section class="section section--alt">
+  <div class="container">
+    <div style="text-align:center; max-width:680px; margin:0 auto 0;">
+      <span class="eyebrow">The Smarter Choice</span>
+      <h2>Why Pure HTML Beats Wix, Squarespace & WordPress Every Time</h2>
+      <p class="subtitle" style="margin:16px auto 0;">Builder platforms are designed for their revenue, not your results. Here's the honest comparison.</p>
+    </div>
+
+    <div class="compare-grid">
+      <div class="compare-card compare-card--them">
+        <div class="compare-card-header">
+          <div class="compare-card-icon">🏗️</div>
+          <div class="compare-card-title">Wix / Squarespace / WordPress</div>
+          <span class="compare-card-badge badge-bad">Costly &amp; Bloated</span>
+        </div>
+        <div class="compare-rows">
+          <div class="compare-row">
+            <div class="compare-row-icon">💸</div>
+            <div class="compare-row-text"><strong>$20–$65+/month forever</strong> in platform subscription fees — just to keep your site live.</div>
+          </div>
+          <div class="compare-row">
+            <div class="compare-row-icon">🐢</div>
+            <div class="compare-row-text"><strong>Slow load times</strong> from bloated page builders, excess plugins, and third-party scripts loading in the background.</div>
+          </div>
+          <div class="compare-row">
+            <div class="compare-row-icon">🔒</div>
+            <div class="compare-row-text"><strong>Platform lock-in.</strong> Your site lives on their servers. If they change pricing or shut down, your business is exposed.</div>
+          </div>
+          <div class="compare-row">
+            <div class="compare-row-icon">📉</div>
+            <div class="compare-row-text"><strong>SEO limitations.</strong> Bloated code, poor Core Web Vitals, and limited control over technical SEO signals hurt your rankings.</div>
+          </div>
+          <div class="compare-row">
+            <div class="compare-row-icon">🎨</div>
+            <div class="compare-row-text"><strong>Template constraints.</strong> You're always fighting the builder to get the design you actually want.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="compare-card compare-card--us">
+        <div class="compare-card-header">
+          <div class="compare-card-icon">⚡</div>
+          <div class="compare-card-title">PPM HTML Website</div>
+          <span class="compare-card-badge badge-good">Fast &amp; Yours Forever</span>
+        </div>
+        <div class="compare-rows">
+          <div class="compare-row">
+            <div class="compare-row-icon">✅</div>
+            <div class="compare-row-text"><strong>$0/month in platform fees.</strong> Hosted on Cloudflare's free tier — you pay for your domain (typically ~$15/year) and nothing else.</div>
+          </div>
+          <div class="compare-row">
+            <div class="compare-row-icon">✅</div>
+            <div class="compare-row-text"><strong>Sub-1-second load times</strong> with pure HTML/CSS/JS. No framework overhead. No unnecessary scripts. Google loves it.</div>
+          </div>
+          <div class="compare-row">
+            <div class="compare-row-icon">✅</div>
+            <div class="compare-row-text"><strong>You own everything.</strong> The code is yours. Host it anywhere. No dependency on any platform or subscription.</div>
+          </div>
+          <div class="compare-row">
+            <div class="compare-row-icon">✅</div>
+            <div class="compare-row-text"><strong>SEO-optimised from day one.</strong> Clean semantic HTML, fast Core Web Vitals, meta tags, schema markup, and sitemap included.</div>
+          </div>
+          <div class="compare-row">
+            <div class="compare-row-icon">✅</div>
+            <div class="compare-row-text"><strong>Built exactly to your brief.</strong> No templates, no compromises. Custom design that reflects your brand and converts visitors.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     WHAT'S INCLUDED
+══════════════════════════════════════════ -->
+<section class="section">
+  <div class="container">
+    <div style="text-align:center; max-width:640px; margin:0 auto;">
+      <span class="eyebrow">What's Included</span>
+      <h2>Everything You Need to Launch a Professional Web Presence</h2>
+      <p class="subtitle" style="margin:16px auto 0;">One flat project fee. No hidden extras. No ongoing platform costs.</p>
+    </div>
+
+    <div class="included-grid">
+      <div class="included-card">
+        <div class="included-card-icon">📄</div>
+        <h3>Up to 15 Pages</h3>
+        <p>Homepage, about, services, contact, FAQ, and more. Full multi-page sites that cover everything your business needs.</p>
+      </div>
+      <div class="included-card">
+        <div class="included-card-icon">📱</div>
+        <h3>Mobile-First &amp; Responsive</h3>
+        <p>Pixel-perfect across all screen sizes — phones, tablets, laptops, desktops. Built mobile-first from the ground up.</p>
+      </div>
+      <div class="included-card">
+        <div class="included-card-icon">💬</div>
+        <h3>WhatsApp &amp; Contact Lead Gen</h3>
+        <p>WhatsApp click-to-chat integration and a working contact form — both connected directly to your inbox or WhatsApp.</p>
+      </div>
+      <div class="included-card">
+        <div class="included-card-icon">🔍</div>
+        <h3>SEO-Optimised from Launch</h3>
+        <p>Keyword-researched page titles, meta descriptions, semantic HTML structure, schema markup, and an XML sitemap.</p>
+      </div>
+      <div class="included-card">
+        <div class="included-card-icon">☁️</div>
+        <h3>Cloudflare Hosting Setup</h3>
+        <p>We set up your site on Cloudflare Pages — free, fast, and globally distributed. HTTPS included as standard.</p>
+      </div>
+      <div class="included-card">
+        <div class="included-card-icon">📊</div>
+        <h3>Google Analytics Setup</h3>
+        <p>GA4 installed and configured so you can track visitor behaviour, traffic sources, and conversions from day one.</p>
+      </div>
+      <div class="included-card">
+        <div class="included-card-icon">⚡</div>
+        <h3>Sub-1-Second Load Times</h3>
+        <p>Pure HTML/CSS/JS — no WordPress, no page builders, no bloat. Optimised images and lean code for maximum speed.</p>
+      </div>
+      <div class="included-card">
+        <div class="included-card-icon">🎨</div>
+        <h3>Custom Design — No Templates</h3>
+        <p>Designed to your brand: your colours, your fonts, your personality. Not a recycled theme with your logo slapped on it.</p>
+      </div>
+      <div class="included-card">
+        <div class="included-card-icon">🚀</div>
+        <h3>Fast Turnaround</h3>
+        <p>Most projects complete within 2–4 weeks from brief to launch. No waiting months for an agency to get around to your site.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     WHAT THIS IS NOT FOR
+══════════════════════════════════════════ -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="not-for-wrap">
+      <span class="eyebrow">Honest Scope</span>
+      <h2>What This Service is Not For</h2>
+      <p class="subtitle" style="margin:16px auto 0;">We believe in being upfront. This service is the right fit for most service businesses — but not every use case.</p>
+
+      <div class="not-for-grid">
+        <div class="not-for-card">
+          <div class="not-for-card-icon">🛒</div>
+          <h3>Online Stores / Ecommerce</h3>
+          <p>If you need product listings, a shopping cart, and payment processing — this isn't the right service. We'd recommend Shopify for that use case.</p>
+        </div>
+        <div class="not-for-card">
+          <div class="not-for-card-icon">🔐</div>
+          <h3>Membership Areas &amp; Logins</h3>
+          <p>Password-protected member portals, gated content, or user accounts are outside the scope of a pure HTML build.</p>
+        </div>
+        <div class="not-for-card">
+          <div class="not-for-card-icon">📅</div>
+          <h3>Booking &amp; Scheduling Systems</h3>
+          <p>Built-in appointment booking or availability calendars require back-end logic. We'd point you to Cal.com or Calendly for this.</p>
+        </div>
+      </div>
+
+      <p class="not-for-note">
+        <strong>This service is ideal for:</strong> service businesses, consultants, personal brands, local businesses, and startups that need a fast, professional website to generate leads and build credibility — without the ongoing cost and complexity of a CMS platform.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     PROCESS
+══════════════════════════════════════════ -->
+<section class="section">
+  <div class="container">
+    <div style="text-align:center; max-width:640px; margin:0 auto;">
+      <span class="eyebrow">How It Works</span>
+      <h2>From Brief to Live in 4 Steps</h2>
+      <p class="subtitle" style="margin:16px auto 0;">A clear, collaborative process — no surprises, no disappearing acts.</p>
+    </div>
+
+    <div class="process-grid">
+      <div class="process-step">
+        <div class="process-num">1</div>
+        <h3>Discovery</h3>
+        <p>We get on a call to understand your business, target audience, goals, and scope. You'll get a clear brief and quote within 48 hours.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-num">2</div>
+        <h3>Design</h3>
+        <p>We build a visual design direction for your homepage first. You review, provide feedback, and we refine until it's exactly right.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-num">3</div>
+        <h3>Build</h3>
+        <p>Once design is approved, we build the full site in clean HTML/CSS/JS — all pages, forms, SEO meta tags, and analytics integrated.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-num">4</div>
+        <h3>Launch</h3>
+        <p>We deploy to Cloudflare, connect your domain, verify everything works, and hand over the files. Your site is live and yours to keep.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     PRICING
+══════════════════════════════════════════ -->
+<section class="section section--alt">
+  <div class="container">
+    <div style="text-align:center; max-width:640px; margin:0 auto;">
+      <span class="eyebrow">Investment</span>
+      <h2>Transparent, Project-Based Pricing</h2>
+      <p class="subtitle" style="margin:16px auto 0;">No retainers. No surprise invoices. One project fee based on your scope.</p>
+    </div>
+
+    <div class="pricing-wrap">
+      <div class="pricing-card">
+        <div class="pricing-card-eyebrow">Custom Website Build</div>
+        <div class="pricing-from"><span>From </span>SGD $1,800</div>
+        <p class="pricing-note">Final price depends on page count, content complexity, and design requirements. Most projects fall between SGD $1,800–$4,500.</p>
+        <div class="pricing-features">
+          <span class="pricing-feat"><span class="pricing-feat-check">✓</span> Up to 15 pages</span>
+          <span class="pricing-feat"><span class="pricing-feat-check">✓</span> Custom design</span>
+          <span class="pricing-feat"><span class="pricing-feat-check">✓</span> Mobile responsive</span>
+          <span class="pricing-feat"><span class="pricing-feat-check">✓</span> SEO setup</span>
+          <span class="pricing-feat"><span class="pricing-feat-check">✓</span> Cloudflare hosting</span>
+          <span class="pricing-feat"><span class="pricing-feat-check">✓</span> Google Analytics</span>
+          <span class="pricing-feat"><span class="pricing-feat-check">✓</span> WhatsApp &amp; contact form</span>
+          <span class="pricing-feat"><span class="pricing-feat-check">✓</span> You own the code</span>
+        </div>
+        <div class="pricing-actions">
+          <a href="https://wa.me/6588394982?text=Hi%20Jax%2C%20I'd%20like%20a%20quote%20for%20a%20website%20build" class="btn btn-wa" target="_blank" rel="noopener">💬 Get a Quote on WhatsApp</a>
+          <a href="https://calendar.app.google/pKXduKHa99n2qbEy8" class="btn btn-outline" target="_blank" rel="noopener">📅 Book a Discovery Call</a>
+        </div>
+        <p class="pricing-disclaimer">Prices in SGD. AUD &amp; MYR quotes available on request. A 50% deposit is required to commence work.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     FAQ
+══════════════════════════════════════════ -->
+<section class="section">
+  <div class="container">
+    <div style="text-align:center; max-width:640px; margin:0 auto;">
+      <span class="eyebrow">FAQ</span>
+      <h2>Common Questions</h2>
+    </div>
+
+    <div class="faq-grid">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          How long does the build take?
+          <span class="faq-q-icon">+</span>
+        </button>
+        <div class="faq-a">
+          Most projects are complete within 2–4 weeks from the discovery call to launch. Timeline depends on page count and how quickly you can provide content (copy, images, branding). We'll give you a realistic timeline upfront — and we stick to it.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Do I own the website files after it's built?
+          <span class="faq-q-icon">+</span>
+        </button>
+        <div class="faq-a">
+          Yes — 100%. Once the project is paid in full, we hand over all the files. You own them outright. You can host them anywhere, make changes yourself, or give them to another developer. There's no lock-in and no ongoing fees to us.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Can I edit the site myself after it's launched?
+          <span class="faq-q-icon">+</span>
+        </button>
+        <div class="faq-a">
+          Pure HTML sites require basic code editing to update content — there's no drag-and-drop CMS interface. For simple text and image updates, it's straightforward if you're comfortable with HTML. If you'd prefer to hand off updates, we offer ongoing maintenance packages — just ask when we chat.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          What if I need more pages later?
+          <span class="faq-q-icon">+</span>
+        </button>
+        <div class="faq-a">
+          No problem. Additional pages can be built and added to your site after launch. We'll quote for extra pages at a flat per-page rate. As long as you still have the files (which you will — you own them), it's a simple addition.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Do you build ecommerce or online store websites?
+          <span class="faq-q-icon">+</span>
+        </button>
+        <div class="faq-a">
+          No — this service is specifically for lead-generation and brochure-style business websites. Ecommerce (product listings, cart, payments) requires a platform like Shopify. If that's what you need, we're happy to point you in the right direction.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          What do I need to provide before you start?
+          <span class="faq-q-icon">+</span>
+        </button>
+        <div class="faq-a">
+          Ideally: your brand assets (logo, colours, fonts), the page content or a brief for each page, any images you want used, and any existing websites you like the look of. Don't have everything ready? We'll work through it with you — a discovery call is the best place to start.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     FINAL CTA BAND
+══════════════════════════════════════════ -->
+<section class="cta-band">
+  <div class="cta-band-bg">
+    <div class="cta-band-orb cta-band-orb-1"></div>
+    <div class="cta-band-orb cta-band-orb-2"></div>
+  </div>
+  <div class="container cta-band-inner">
+    <span class="eyebrow" style="background:rgba(46,143,235,.2);color:#60b3ff;">Ready to Get Started?</span>
+    <h2>A Fast, Professional Website — Without the Monthly Fees</h2>
+    <p>Tell Jax what you need. Get a quote within 48 hours. Be live in weeks, not months.</p>
+    <div class="cta-band-actions">
+      <a href="https://wa.me/6588394982?text=Hi%20Jax%2C%20I'm%20interested%20in%20a%20website%20build%20for%20my%20business" class="btn btn-wa" target="_blank" rel="noopener">💬 WhatsApp Jax for a Quote</a>
+      <a href="https://calendar.app.google/pKXduKHa99n2qbEy8" class="btn btn-ghost" target="_blank" rel="noopener">📅 Book a Free Discovery Call</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-logo">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAA10lEQVR4nNWXwRECIQxFAzGJ3izBEmzCKqzCKqzCJraEPdmDnr4TGSELwAQ+KcwA/vzHzrsEojpdL68yEDbugTU0do89YrW5mkTwcOc69Cy+Hh7fOrn/ap6RpSnyOa/xn9voJdUDSBtil1DYT4CufQY11KYi0AuPaShMA8BKT1US8GdwK5vgfaUI5KJiQ3sRa9d674FxQZa0vN1pS0cl0BrekiiMCaBXumhEoXxCPROD+UoZH9KW06/Gn0RsDLlPu73Av+XkF8UrbWtS4goPMyJ2BZYNsG93r+LXzaPusaxAAAAAElFTkSuQmCC" alt="PPM Logo" class="footer-brand-logo-img">
+          <div>
+            <div class="footer-brand-name">Prism <em>Performance</em><span class="footer-brand-sub">Marketing</span></div>
+          </div>
+        </div>
+        <p class="footer-brand-desc">A performance marketing agency helping businesses across Australia, Singapore, and Malaysia grow with Meta Ads, Google Ads, SEO, and high-performance websites.</p>
+        <a href="https://wa.me/6588394982" class="btn btn-wa" style="font-size:13px;padding:11px 20px;" target="_blank" rel="noopener">💬 WhatsApp Jax</a>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="Meta-Ads.html">Meta Ads</a>
+        <a href="Google-Ads.html">Google Ads</a>
+        <a href="SEO.html">SEO Services</a>
+        <a href="Web-Dev.html">Website Development</a>
+        <a href="Services.html">All Services</a>
+      </div>
+      <div class="footer-col">
+        <h4>Training</h4>
+        <a href="Training-Meta-Ads.html">Meta Ads Training</a>
+        <a href="Training-Google-Ads.html">Google Ads Training</a>
+        <a href="Training-AI-Prompting.html">AI Prompting</a>
+        <a href="Training.html">All Training</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="Case-Studies.html">Case Studies</a>
+        <a href="About.html">About Jax</a>
+        <a href="FAQ.html">FAQ</a>
+        <a href="Contact.html">Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Prism Performance Marketing. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="Privacy.html">Privacy Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Nav scroll shadow
+  window.addEventListener('scroll', () => {
+    document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 20);
+  });
+
+  // Mobile nav toggle
+  function toggleNav() {
+    const mn = document.getElementById('mobileNav');
+    mn.classList.toggle('open');
+    document.body.style.overflow = mn.classList.contains('open') ? 'hidden' : '';
+  }
+
+  // Mobile accordion
+  function toggleMnSection(id) {
+    const body = document.getElementById(id);
+    const chevron = document.getElementById(id + '-chevron');
+    const isOpen = body.style.display !== 'none';
+    body.style.display = isOpen ? 'none' : 'block';
+    if (chevron) chevron.style.transform = isOpen ? '' : 'rotate(180deg)';
+  }
+
+  // Desktop dropdown
+  let openDropdown = null;
+  function toggleDropdown(id, btn) {
+    const dd = document.getElementById(id);
+    const isOpen = dd.classList.contains('open');
+    if (openDropdown && openDropdown !== dd) {
+      openDropdown.classList.remove('open');
+    }
+    dd.classList.toggle('open', !isOpen);
+    openDropdown = isOpen ? null : dd;
+  }
+  document.addEventListener('click', (e) => {
+    if (openDropdown && !openDropdown.closest('.nav-item').contains(e.target)) {
+      openDropdown.classList.remove('open');
+      openDropdown = null;
+    }
+  });
+
+  // FAQ toggle
+  function toggleFaq(btn) {
+    const answer = btn.nextElementSibling;
+    const icon = btn.querySelector('.faq-q-icon');
+    const isOpen = answer.classList.contains('open');
+    // close all
+    document.querySelectorAll('.faq-a').forEach(a => a.classList.remove('open'));
+    document.querySelectorAll('.faq-q-icon').forEach(i => { i.textContent = '+'; i.style.transform = ''; });
+    if (!isOpen) {
+      answer.classList.add('open');
+      icon.textContent = '−';
+      icon.style.transform = 'rotate(0deg)';
+    }
+  }
+</script>
+</body>
+</html>

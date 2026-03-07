@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAIAEBAAAAAAIAClAgAAJgAAACAgAAAAACAAEAEAAMsCAACJUE5HDQoaCgAAAA1JSERSAAAAEAAAABAIBgAAAB/z/2EAAAJsSURBVHicdZPPa1NZFMc/59yXJnnpWFN/QAPSYcQqUbAWQSkVYcyAunOcEXXjRgT/AreudKtbNy7cCP4AXSjSgAiiCxUdEFGEUcSqHRDrS03eS++7x8WklBT9wtlcvp9zv9x7jsDuqFZfuCXqGhbyADgAEMAg5OAKYIGeclGnFvLmhxeF/TJSn5xWdQ3LfUBEF12YAYYUYixrQTTQOwPMgrhIQ8ibquoaFrz1waKYT1mx7zSrj1+nMLIF67Zh0SKiFrypuoZa8DmI9MFpi+JvU0RDNSx4KpMnlm5fMooFnyuIY7lEKW87RPvpFRZmX6HxSorrd2FpaynF/0any0FLE4pjv4M60n/vI1GR9pPLlCeO9AVdVH8DDBOItx7g24MLWPsLGlfpPL+BZS2KY3uwzhyo+0EDUazbpjT2B646SmHNBio7jkHIKY//DZYTj/+FFAch+N43g9TqkwYCwSNxleqf55i7eQpBQJSQtdC4Sv51hsGpkxACyfRZdHA1hLyXQJWQJVQmDtN9+xA/+xKffMTPvcPSBP/5Ddbt8O3RJQbWTeCGR8FngKAg4DNcdZSBX3fSfnYVraxCohJSiCEqIoUyUh4izM3Qff+MyvajhKwF6lDUEdKEePwg6YvbdN89JqRfCfOzhPn/lir5hPmM1r3zRGs34Vaug4UOMrJxu3dDNTd89CLZ67tYmoBGwPLB6T10Nk+pvpfszQOSO2fySESdxqus8881QSPkZzCABWSgQvqqSZj/bNEva52M1Kem1RYaedoKmOlP4f4oQQslNVdqCuyOapvzW+Ki3jr/YLT7Y+SiTjFrzgyz/ztZFw+4/WijJgAAAABJRU5ErkJggolQTkcNChoKAAAADUlIRFIAAAAgAAAAIAgGAAAAc3p69AAAANdJREFUeJzVl8ERAiEMRQNjCZ4swRJswiqsyipsYkvYEvZkD3r6TmSELAET+KcwA/vzHzvsEojpdL68yEDbugTU0do89YrW5mkTwcOc69Cy+Hh7fOrn/ap6RpSnyOa/xn9voJdUDSBtil1DYT4CufQY11KYi0AuPaShMA8BKT1US8GdwK5vgfaUI5KJiQ3sRa9d674FxQZa0vN1pS0cl0BrekiiMCaBXumhEoXxCPROD+UoZH9KW06/Gn0RsDLlPu73Av+XkF8UrbWtS4goPMyJ2BZYNsG93r+LXzaPusaxAAAAAElFTkSuQmCC" />
+  <link rel="shortcut icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAIAEBAAAAAAIAClAgAAJgAAACAgAAAAACAAEAEAAMsCAACJUE5HDQoaCgAAAA1JSERSAAAAEAAAABAIBgAAAB/z/2EAAAJsSURBVHicdZPPa1NZFMc/59yXJnnpWFN/QAPSYcQqUbAWQSkVYcyAunOcEXXjRgT/AreudKtbNy7cCP4AXSjSgAiiCxUdEFGEUcSqHRDrS03eS++7x8WklBT9wtlcvp9zv9x7jsDuqFZfuCXqGhbyADgAEMAg5OAKYIGeclGnFvLmhxeF/TJSn5xWdQ3LfUBEF12YAYYUYixrQTTQOwPMgrhIQ8ibquoaFrz1waKYT1mx7zSrj1+nMLIF67Zh0SKiFrypuoZa8DmI9MFpi+JvU0RDNSx4KpMnlm5fMooFnyuIY7lEKW87RPvpFRZmX6HxSorrd2FpaynF/0any0FLE4pjv4M60n/vI1GR9pPLlCeO9AVdVH8DDBOItx7g24MLWPsLGlfpPL+BZS2KY3uwzhyo+0EDUazbpjT2B646SmHNBio7jkHIKY//DZYTj/+FFAch+N43g9TqkwYCwSNxleqf55i7eQpBQJSQtdC4Sv51hsGpkxACyfRZdHA1hLyXQJWQJVQmDtN9+xA/+xKffMTPvcPSBP/5Ddbt8O3RJQbWTeCGR8FngKAg4DNcdZSBX3fSfnYVraxCohJSiCEqIoUyUh4izM3Qff+MyvajhKwF6lDUEdKEePwg6YvbdN89JqRfCfOzhPn/lir5hPmM1r3zRGs34Vaug4UOMrJxu3dDNTd89CLZ67tYmoBGwPLB6T10Nk+pvpfszQOSO2fySESdxqus8881QSPkZzCABWSgQvqqSZj/bNEva52M1Kem1RYaedoKmOlP4f4oQQslNVdqCuyOapvzW+Ki3jr/YLT7Y+SiTjFrzgyz/ztZFw+4/WijJgAAAABJRU5ErkJggolQTkcNChoKAAAADUlIRFIAAAAgAAAAIAgGAAAAc3p69AAAANdJREFUeJzVl8ERAiEMRQNjCZ4swRJswiqsyipsYkvYEvZkD3r6TmSELAET+KcwA/vzHzvsEojpdL68yEDbugTU0do89YrW5mkTwcOc69Cy+Hh7fOrn/ap6RpSnyOa/xn9voJdUDSBtil1DYT4CufQY11KYi0AuPaShMA8BKT1US8GdwK5vgfaUI5KJiQ3sRa9d674FxQZa0vN1pS0cl0BrekiiMCaBXumhEoXxCPROD+UoZH9KW06/Gn0RsDLlPu73Av+XkF8UrbWtS4goPMyJ2BZYNsG93r+LXzaPusaxAAAAAElFTkSuQmCC" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found | Prism Performance Marketing</title>
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Lato:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --navy:#1A2A3A;--blue:#2E8FEB;--blue-dark:#1a6ec4;
+      --white:#ffffff;--bg:#f7f9fc;--silver:#8494a0;
+    }
+    body{font-family:'Lato',sans-serif;background:var(--bg);color:var(--navy);min-height:100vh;display:flex;flex-direction:column;}
+    a{text-decoration:none;color:inherit;}
+
+    /* NAV */
+    nav{background:var(--white);padding:0 32px;height:72px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 1px 0 rgba(196,201,204,.3);}
+    .nav-logo{display:flex;align-items:center;gap:10px;}
+    .nav-logo-icon{width:38px;height:38px;}
+    .nav-logo-text{font-family:'Montserrat',sans-serif;font-size:15px;font-weight:800;}
+    .nav-logo-text span{color:var(--blue);}
+
+    /* MAIN */
+    main{flex:1;display:flex;align-items:center;justify-content:center;padding:60px 24px;}
+    .container{max-width:600px;text-align:center;}
+    .error-code{font-family:'Montserrat',sans-serif;font-size:120px;font-weight:900;line-height:1;color:var(--blue);opacity:.12;letter-spacing:-4px;}
+    .error-title{font-family:'Montserrat',sans-serif;font-size:32px;font-weight:800;color:var(--navy);margin-top:-40px;margin-bottom:16px;}
+    .error-desc{font-size:17px;color:var(--silver);line-height:1.7;margin-bottom:40px;}
+    .btn-group{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:50px;font-family:'Lato',sans-serif;font-weight:700;font-size:15px;cursor:pointer;transition:all .2s;border:none;}
+    .btn-blue{background:var(--blue);color:#fff;box-shadow:0 6px 22px rgba(46,143,235,.28);}
+    .btn-blue:hover{background:var(--blue-dark);transform:translateY(-1px);}
+    .btn-outline{background:transparent;color:var(--navy);border:2px solid rgba(196,201,204,.6);}
+    .btn-outline:hover{border-color:var(--blue);color:var(--blue);}
+
+    .helpful-links{margin-top:56px;padding-top:40px;border-top:1px solid rgba(196,201,204,.3);}
+    .helpful-links h3{font-family:'Montserrat',sans-serif;font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--silver);margin-bottom:20px;}
+    .link-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+    .link-card{background:var(--white);border-radius:12px;padding:16px;text-align:center;border:1px solid rgba(196,201,204,.3);transition:all .2s;}
+    .link-card:hover{border-color:var(--blue);transform:translateY(-2px);box-shadow:0 4px 16px rgba(46,143,235,.1);}
+    .link-card-icon{font-size:24px;margin-bottom:8px;}
+    .link-card-label{font-size:13px;font-weight:700;color:var(--navy);}
+
+    /* FOOTER */
+    footer{background:var(--navy);color:rgba(255,255,255,.5);text-align:center;padding:20px;font-size:13px;}
+
+    @media(max-width:600px){
+      .error-code{font-size:80px;}
+      .error-title{font-size:24px;}
+      .link-grid{grid-template-columns:1fr 1fr;}
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <svg class="nav-logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="40" height="40" rx="8" fill="#1A2A3A"/>
+      <polygon points="20,6 34,32 6,32" stroke="#2E8FEB" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
+      <line x1="20" y1="6" x2="20" y2="19" stroke="#2E8FEB" stroke-width="2" stroke-linecap="round"/>
+      <line x1="13" y1="19" x2="27" y2="19" stroke="#2E8FEB" stroke-width="1.5" stroke-linecap="round"/>
+    </svg>
+    <div class="nav-logo-text">Prism <span>Performance</span><br><span style="font-size:10px;letter-spacing:.12em;color:#8494a0;font-family:'Lato',sans-serif;font-weight:700;">MARKETING</span></div>
+  </a>
+  <a href="index.html" class="btn btn-blue" style="padding:10px 22px;font-size:14px;">← Back to Home</a>
+</nav>
+
+<main>
+  <div class="container">
+    <div class="error-code">404</div>
+    <h1 class="error-title">Page Not Found</h1>
+    <p class="error-desc">The page you're looking for doesn't exist or may have been moved. Let's get you back on track.</p>
+    <div class="btn-group">
+      <a href="index.html" class="btn btn-blue">Go to Homepage</a>
+      <a href="Contact.html" class="btn btn-outline">Contact Us</a>
+    </div>
+
+    <div class="helpful-links">
+      <h3>Helpful Pages</h3>
+      <div class="link-grid">
+        <a href="services.html" class="link-card">
+          <div class="link-card-icon">🚀</div>
+          <div class="link-card-label">Our Services</div>
+        </a>
+        <a href="training.html" class="link-card">
+          <div class="link-card-icon">🎓</div>
+          <div class="link-card-label">Training</div>
+        </a>
+        <a href="Case-Studies.html" class="link-card">
+          <div class="link-card-icon">📊</div>
+          <div class="link-card-label">Case Studies</div>
+        </a>
+        <a href="About.html" class="link-card">
+          <div class="link-card-icon">👋</div>
+          <div class="link-card-label">About Jax</div>
+        </a>
+        <a href="FAQ.html" class="link-card">
+          <div class="link-card-icon">❓</div>
+          <div class="link-card-label">FAQ</div>
+        </a>
+        <a href="Contact.html" class="link-card">
+          <div class="link-card-icon">💬</div>
+          <div class="link-card-label">Contact</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  © 2025 Prism Performance Marketing. All rights reserved.
+</footer>
+
+</body>
+</html>

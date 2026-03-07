@@ -2,12 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAIAEBAAAAAAIAClAgAAJgAAACAgAAAAACAAEAEAAMsCAACJUE5HDQoaCgAAAA1JSERSAAAAEAAAABAIBgAAAB/z/2EAAAJsSURBVHicdZPPa1NZFMc/59yXJnnpWFN/QAPSYcQqUbAWQSkVYcyAunOcEXXjRgT/AreudKtbNy7cCP4AXSjSgAiiCxUdEFGEUcSqHRDrS03eS++7x8WklBT9wtlcvp9zv9x7jsDuqFZfuCXqGhbyADgAEMAg5OAKYIGeclGnFvLmhxeF/TJSn5xWdQ3LfUBEF12YAYYUYixrQTTQOwPMgrhIQ8ibquoaFrz1waKYT1mx7zSrj1+nMLIF67Zh0SKiFrypuoZa8DmI9MFpi+JvU0RDNSx4KpMnlm5fMooFnyuIY7lEKW87RPvpFRZmX6HxSorrd2FpaynF/0any0FLE4pjv4M60n/vI1GR9pPLlCeO9AVdVH8DDBOItx7g24MLWPsLGlfpPL+BZS2KY3uwzhyo+0EDUazbpjT2B646SmHNBio7jkHIKY//DZYTj/+FFAch+N43g9TqkwYCwSNxleqf55i7eQpBQJSQtdC4Sv51hsGpkxACyfRZdHA1hLyXQJWQJVQmDtN9+xA/+xKffMTPvcPSBP/5Ddbt8O3RJQbWTeCGR8FngKAg4DNcdZSBX3fSfnYVraxCohJSiCEqIoUyUh4izM3Qff+MyvajhKwF6lDUEdKEePwg6YvbdN89JqRfCfOzhPn/lir5hPmM1r3zRGs34Vaug4UOMrJxu3dDNTd89CLZ67tYmoBGwPLB6T10Nk+pvpfszQOSO2fySESdxqus8881QSPkZzCABWSgQvqqSZj/bNEva52M1Kem1RYaedoKmOlP4f4oQQslNVdqCuyOapvzW+Ki3jr/YLT7Y+SiTjFrzgyz/ztZFw+4/WijJgAAAABJRU5ErkJggolQTkcNChoKAAAADUlIRFIAAAAgAAAAIAgGAAAAc3p69AAAANdJREFUeJzVl8ERAiEMRQNjCZ4swRJswiqsyipsYkvYEvZkD3r6TmSELAET+KcwA/vzHzvsEojpdL68yEDbugTU0do89YrW5mkTwcOc69Cy+Hh7fOrn/ap6RpSnyOa/xn9voJdUDSBtil1DYT4CufQY11KYi0AuPaShMA8BKT1US8GdwK5vgfaUI5KJiQ3sRa9d674FxQZa0vN1pS0cl0BrekiiMCaBXumhEoXxCPROD+UoZH9KW06/Gn0RsDLlPu73Av+XkF8UrbWtS4goPMyJ2BZYNsG93r+LXzaPusaxAAAAAElFTkSuQmCC" />
+  <link rel="shortcut icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAIAEBAAAAAAIAClAgAAJgAAACAgAAAAACAAEAEAAMsCAACJUE5HDQoaCgAAAA1JSERSAAAAEAAAABAIBgAAAB/z/2EAAAJsSURBVHicdZPPa1NZFMc/59yXJnnpWFN/QAPSYcQqUbAWQSkVYcyAunOcEXXjRgT/AreudKtbNy7cCP4AXSjSgAiiCxUdEFGEUcSqHRDrS03eS++7x8WklBT9wtlcvp9zv9x7jsDuqFZfuCXqGhbyADgAEMAg5OAKYIGeclGnFvLmhxeF/TJSn5xWdQ3LfUBEF12YAYYUYixrQTTQOwPMgrhIQ8ibquoaFrz1waKYT1mx7zSrj1+nMLIF67Zh0SKiFrypuoZa8DmI9MFpi+JvU0RDNSx4KpMnlm5fMooFnyuIY7lEKW87RPvpFRZmX6HxSorrd2FpaynF/0any0FLE4pjv4M60n/vI1GR9pPLlCeO9AVdVH8DDBOItx7g24MLWPsLGlfpPL+BZS2KY3uwzhyo+0EDUazbpjT2B646SmHNBio7jkHIKY//DZYTj/+FFAch+N43g9TqkwYCwSNxleqf55i7eQpBQJSQtdC4Sv51hsGpkxACyfRZdHA1hLyXQJWQJVQmDtN9+xA/+xKffMTPvcPSBP/5Ddbt8O3RJQbWTeCGR8FngKAg4DNcdZSBX3fSfnYVraxCohJSiCEqIoUyUh4izM3Qff+MyvajhKwF6lDUEdKEePwg6YvbdN89JqRfCfOzhPn/lir5hPmM1r3zRGs34Vaug4UOMrJxu3dDNTd89CLZ67tYmoBGwPLB6T10Nk+pvpfszQOSO2fySESdxqus8881QSPkZzCABWSgQvqqSZj/bNEva52M1Kem1RYaedoKmOlP4f4oQQslNVdqCuyOapvzW+Ki3jr/YLT7Y+SiTjFrzgyz/ztZFw+4/WijJgAAAABJRU5ErkJggolQTkcNChoKAAAADUlIRFIAAAAgAAAAIAgGAAAAc3p69AAAANdJREFUeJzVl8ERAiEMRQNjCZ4swRJswiqsyipsYkvYEvZkD3r6TmSELAET+KcwA/vzHzvsEojpdL68yEDbugTU0do89YrW5mkTwcOc69Cy+Hh7fOrn/ap6RpSnyOa/xn9voJdUDSBtil1DYT4CufQY11KYi0AuPaShMA8BKT1US8GdwK5vgfaUI5KJiQ3sRa9d674FxQZa0vN1pS0cl0BrekiiMCaBXumhEoXxCPROD+UoZH9KW06/Gn0RsDLlPu73Av+XkF8UrbWtS4goPMyJ2BZYNsG93r+LXzaPusaxAAAAAElFTkSuQmCC" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Prism Performance Marketing | Meta Ads, Google Ads & SEO Agency — Australia, Singapore, Malaysia</title>
-  <meta name="description" content="Founded by an Meta Trainer &amp; TikTok APAC Lead, Prism Performance Marketing helps SMEs across Australia, Singapore and Malaysia grow revenue through Meta Ads, Google Ads, SEO and digital marketing training." />
+  <title>Prism Performance Marketing | Meta Ads, Google Ads & SEO</title>
+  <meta name="description" content="Founded by a Meta Advertising Trainer & TikTok APAC Training Lead, Prism Performance Marketing helps SMEs across Australia, Singapore and Malaysia grow revenue through Meta Ads, Google Ads, SEO and digital marketing training." />
   <meta name="keywords" content="Meta Ads agency Australia, Google Ads agency Singapore, SEO agency Malaysia, Facebook ads agency, paid advertising agency, digital marketing training, Jax Prism Performance Marketing" />
   <meta property="og:title" content="Prism Performance Marketing | Data-Driven Ads & Growth" />
-  <meta property="og:description" content="$8M+ in client revenue. Meta Ads, Google Ads, SEO & Training. Founded by an Meta Trainer &amp; TikTok APAC Lead — Jax." />
+  <meta property="og:description" content="$8M+ in client revenue. Meta Ads, Google Ads, SEO & Training. Founded by a Meta Advertising Trainer & TikTok APAC Lead — Jax." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.prismperformancemarketing.com/" />
   <link rel="canonical" href="https://www.prismperformancemarketing.com/" />
@@ -150,6 +152,15 @@
     .mn-section { margin-bottom:28px; }
     .mn-label { font-family:'Lato',sans-serif; font-size:10.5px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--silver); margin-bottom:10px; padding:0 4px; }
     .mobile-nav a { display:block; font-family:'Lato',sans-serif; font-weight:700; font-size:18px; color:var(--navy); padding:12px 4px; border-bottom:1px solid rgba(196,201,204,.25); }
+    .mn-accordion-btn {
+      display:flex; align-items:center; justify-content:space-between;
+      width:100%; background:none; border:none; padding:12px 4px;
+      font-family:'Lato',sans-serif; font-weight:700; font-size:18px;
+      color:var(--navy); cursor:pointer; border-bottom:1px solid rgba(196,201,204,.25);
+      text-align:left;
+    }
+    .mn-accordion-btn:hover { color:var(--blue); }
+    .mn-chevron { font-size:14px; transition:transform 0.2s; }
     .mn-ctas { display:flex; flex-direction:column; gap:12px; margin-top:24px; }
     .mn-ctas .btn { justify-content:center; width:100%; }
 
@@ -465,10 +476,28 @@
   fbq('init', '000000000000000');
   fbq('track', 'PageView');
   </script>
-  <noscript><img height="1" width="1" style="display:none"
+  <noscript><img height="1" width="1" style="display:none" alt=""
   src="https://www.facebook.com/tr?id=000000000000000&ev=PageView&noscript=1"
   /></noscript>
   <!-- ═══ End Meta Pixel ═══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Prism Performance Marketing",
+    "url": "https://www.prismperformancemarketing.com",
+    "logo": "https://www.prismperformancemarketing.com/",
+    "description": "Meta Ads, Google Ads, SEO and digital marketing training agency founded by a Meta Advertising Trainer and TikTok APAC Training Lead. Serving SMEs across Australia, Singapore and Malaysia.",
+    "founder": {
+      "@type": "Person",
+      "name": "Jax",
+      "jobTitle": "Meta Advertising Trainer & TikTok APAC Training Lead"
+    },
+    "areaServed": ["Australia", "Singapore", "Malaysia"],
+    "serviceType": ["Meta Ads", "Google Ads", "SEO", "Digital Marketing Training"],
+    "sameAs": []
+  }
+  </script>
 </head>
 <body>
   <!-- ═══ Google Tag Manager (noscript) ═══ -->
@@ -494,21 +523,22 @@
         <li class="nav-item">
           <button onclick="toggleDropdown('services-dd', this)">Services <span class="nav-chevron">▾</span></button>
           <div class="nav-dropdown" id="services-dd" role="menu">
-            <a href="meta-ads.html" role="menuitem"><span class="nd-icon">📘</span><div><div>Meta Ads</div><div class="nd-sub">Facebook &amp; Instagram advertising</div></div></a>
-            <a href="google-ads.html" role="menuitem"><span class="nd-icon">🔴</span><div><div>Google Ads</div><div class="nd-sub">Search, Shopping &amp; Display</div></div></a>
+            <a href="Meta-Ads.html" role="menuitem"><span class="nd-icon">📘</span><div><div>Meta Ads</div><div class="nd-sub">Facebook &amp; Instagram advertising</div></div></a>
+            <a href="Google-Ads.html" role="menuitem"><span class="nd-icon">🔴</span><div><div>Google Ads</div><div class="nd-sub">Search, Shopping &amp; Display</div></div></a>
+            <a href="Web-Dev.html" role="menuitem"><span class="nd-icon">🌐</span><div><div>Website Development</div><div class="nd-sub">Fast, lean HTML websites</div></div></a>
             <div class="nd-divider"></div>
-            <a href="services.html" role="menuitem"><span class="nd-icon">🗂️</span><div><div>All Services</div><div class="nd-sub">Full overview</div></div></a>
+            <a href="Services.html" role="menuitem"><span class="nd-icon">🗂️</span><div><div>All Services</div><div class="nd-sub">Full overview</div></div></a>
           </div>
         </li>
-        <li class="nav-item"><a href="seo.html">SEO</a></li>
+        <li class="nav-item"><a href="SEO.html">SEO</a></li>
         <li class="nav-item">
           <button onclick="toggleDropdown('training-dd', this)">Training <span class="nav-chevron">▾</span></button>
           <div class="nav-dropdown" id="training-dd" role="menu">
-            <a href="training-meta-ads.html" role="menuitem"><span class="nd-icon">📘</span><div><div>Facebook &amp; Instagram Ads</div><div class="nd-sub">Run your own Meta campaigns</div></div></a>
-            <a href="training-google-ads.html" role="menuitem"><span class="nd-icon">🔴</span><div><div>Google Ads Training</div><div class="nd-sub">Search, Shopping &amp; Display</div></div></a>
+            <a href="Training-Meta-Ads.html" role="menuitem"><span class="nd-icon">📘</span><div><div>Facebook &amp; Instagram Ads</div><div class="nd-sub">Run your own Meta campaigns</div></div></a>
+            <a href="Training-Google-Ads.html" role="menuitem"><span class="nd-icon">🔴</span><div><div>Google Ads Training</div><div class="nd-sub">Search, Shopping &amp; Display</div></div></a>
             <a href="Training-AI-Prompting.html" role="menuitem"><span class="nd-icon">🤖</span><div><div>AI Prompting Mastery</div><div class="nd-sub">For entrepreneurs &amp; teams</div></div></a>
             <div class="nd-divider"></div>
-            <a href="training.html" role="menuitem"><span class="nd-icon">🎓</span><div><div>All Training</div><div class="nd-sub">Workshops, courses &amp; live sessions</div></div></a>
+            <a href="Training.html" role="menuitem"><span class="nd-icon">🎓</span><div><div>All Training</div><div class="nd-sub">Workshops, courses &amp; live sessions</div></div></a>
           </div>
         </li>
         <li class="nav-item"><a href="Case-Studies.html">Case Studies</a></li>
@@ -534,10 +564,11 @@
       <span>Services</span><span class="mn-chevron" id="mn-services-chevron">▾</span>
     </button>
     <div class="mn-accordion-body" id="mn-services" style="display:none;">
-      <a href="services.html" onclick="toggleNav()">🗂️ All Services</a>
-      <a href="meta-ads.html" onclick="toggleNav()">📘 Meta Ads Management</a>
-      <a href="google-ads.html" onclick="toggleNav()">🔴 Google Ads Management</a>
-      <a href="seo.html" onclick="toggleNav()">🔍 SEO Services</a>
+      <a href="Services.html" onclick="toggleNav()">🗂️ All Services</a>
+      <a href="Meta-Ads.html" onclick="toggleNav()">📘 Meta Ads Management</a>
+      <a href="Google-Ads.html" onclick="toggleNav()">🔴 Google Ads Management</a>
+      <a href="SEO.html" onclick="toggleNav()">🔍 SEO Services</a>
+      <a href="Web-Dev.html" onclick="toggleNav()">🌐 Website Development</a>
     </div>
   </div>
   <div class="mn-section">
@@ -545,9 +576,9 @@
       <span>Training</span><span class="mn-chevron" id="mn-training-chevron">▾</span>
     </button>
     <div class="mn-accordion-body" id="mn-training" style="display:none;">
-      <a href="training.html" onclick="toggleNav()">🎓 All Training</a>
-      <a href="training-meta-ads.html" onclick="toggleNav()">📘 Facebook &amp; Instagram Ads</a>
-      <a href="training-google-ads.html" onclick="toggleNav()">🔴 Google Ads Training</a>
+      <a href="Training.html" onclick="toggleNav()">🎓 All Training</a>
+      <a href="Training-Meta-Ads.html" onclick="toggleNav()">📘 Facebook &amp; Instagram Ads</a>
+      <a href="Training-Google-Ads.html" onclick="toggleNav()">🔴 Google Ads Training</a>
       <a href="Training-AI-Prompting.html" onclick="toggleNav()">🤖 AI Prompting Mastery</a>
     </div>
   </div>
@@ -759,7 +790,7 @@
       </div>
       <div>
         <p class="subtitle">Every campaign we run is engineered around one goal: profitable, scalable growth — not follower counts or impressions.</p>
-        <a href="services.html" class="btn btn-outline" style="margin-top:24px;">View All Services →</a>
+        <a href="Services.html" class="btn btn-outline" style="margin-top:24px;">View All Services →</a>
       </div>
     </div>
 
@@ -806,7 +837,7 @@
           <div class="svc-platform sp-meta">📘 Meta Ads</div>
           <h3>Facebook &amp; Instagram Advertising</h3>
           <p>We design, launch and optimise Meta campaigns built to reach your ideal customer — across the full funnel from cold audience to retargeting. Backed by first-hand platform knowledge from inside Meta itself.</p>
-          <a href="meta-ads.html" class="svc-link">Explore Meta Ads <span>→</span></a>
+          <a href="Meta-Ads.html" class="svc-link">Explore Meta Ads <span>→</span></a>
         </div>
       </article>
 
@@ -836,7 +867,7 @@
           <div class="svc-platform sp-google">🔴 Google Ads</div>
           <h3>Search, Shopping &amp; Display Ads</h3>
           <p>Capture demand when it's highest. We manage Google Search, Shopping and Display campaigns built to maximise ROI for your specific budget and market.</p>
-          <a href="google-ads.html" class="svc-link">Explore Google Ads <span>→</span></a>
+          <a href="Google-Ads.html" class="svc-link">Explore Google Ads <span>→</span></a>
         </div>
       </article>
 
@@ -879,7 +910,7 @@
           <div class="svc-platform sp-seo">🔍 SEO</div>
           <h3>On-Page SEO Optimisation</h3>
           <p>Rank higher, get found faster. We optimise your site's content, structure and metadata to drive sustainable organic traffic growth.</p>
-          <a href="seo.html" class="svc-link">Explore SEO <span>→</span></a>
+          <a href="SEO.html" class="svc-link">Explore SEO <span>→</span></a>
         </div>
       </article>
     </div>
@@ -1081,7 +1112,7 @@
         <div class="eyebrow">Training &amp; Education</div>
         <h2 id="training-h2">Learn to Run Your Own Ads.<br/>Or Master AI for Your Business.</h2>
       </div>
-      <a href="training.html" class="btn btn-outline">View All Training →</a>
+      <a href="Training.html" class="btn btn-outline">View All Training →</a>
     </div>
     <div class="training-grid">
       <article class="training-card tc-meta reveal">
@@ -1093,7 +1124,7 @@
           <span class="format-tag">🎤 Live Workshop</span>
         </div>
         <div class="training-for">For: Business owners · Marketing teams · Corporates</div>
-        <a href="training-meta-ads.html" class="svc-link">Learn more <span>→</span></a>
+        <a href="Training-Meta-Ads.html" class="svc-link">Learn more <span>→</span></a>
       </article>
       <article class="training-card tc-google reveal">
         <div class="training-icon ti-google">🔴</div>
@@ -1104,7 +1135,7 @@
           <span class="format-tag">🎤 Live Workshop</span>
         </div>
         <div class="training-for">For: Business owners · In-house teams · Corporates</div>
-        <a href="training-google-ads.html" class="svc-link">Learn more <span>→</span></a>
+        <a href="Training-Google-Ads.html" class="svc-link">Learn more <span>→</span></a>
       </article>
       <article class="training-card tc-ai reveal">
         <div class="training-icon ti-ai">🤖</div>
@@ -1245,18 +1276,18 @@
       <div>
         <div class="footer-col-label">Services</div>
         <ul class="footer-links">
-          <li><a href="services.html">All Services</a></li>
-          <li><a href="meta-ads.html">Meta Ads</a></li>
-          <li><a href="google-ads.html">Google Ads</a></li>
-          <li><a href="seo.html">SEO Services</a></li>
+          <li><a href="Services.html">All Services</a></li>
+          <li><a href="Meta-Ads.html">Meta Ads</a></li>
+          <li><a href="Google-Ads.html">Google Ads</a></li>
+          <li><a href="SEO.html">SEO Services</a></li>
         </ul>
       </div>
       <div>
         <div class="footer-col-label">Training</div>
         <ul class="footer-links">
-          <li><a href="training.html">All Training</a></li>
-          <li><a href="training-meta-ads.html">Facebook &amp; Instagram Ads</a></li>
-          <li><a href="training-google-ads.html">Google Ads</a></li>
+          <li><a href="Training.html">All Training</a></li>
+          <li><a href="Training-Meta-Ads.html">Facebook &amp; Instagram Ads</a></li>
+          <li><a href="Training-Google-Ads.html">Google Ads</a></li>
           <li><a href="Training-AI-Prompting.html">AI Prompting Mastery</a></li>
         </ul>
       </div>
